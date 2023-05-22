@@ -17,15 +17,14 @@ const promises = [
 ];
 
 async function callfn(){
-	await Promise.all(promises).then((result)=>{
+	await Promise.all(promises).then((results)=>{
 		res.innerHTML=``;
-		reult.forEach((item)=>{
+		results.forEach((item)=>{
 			res.innerHTML +=`
    <tr>
    <td>$(item.name)</td>
    <td>$(item.time)</td>
-   </tr>
-   `;
+   </tr>`;
 	});
 	}).catch((err)=>{
 		console.log(err);
